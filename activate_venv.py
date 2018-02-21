@@ -27,7 +27,8 @@ def bash_source(filename):
 
 def main(args):
     if not Path('setup.py').exists():
-        raise RuntimeError('setup.py not found; run this script in a directory with a Python package source')
+        print('setup.py not found; run this script in a directory with a Python package source', file=sys.stderr)
+        raise SystemExit(1)
     venv.create('venv', system_site_packages=True, with_pip=True)
     bash_source('venv/bin/activate')
 
