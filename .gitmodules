@@ -1,3 +1,6 @@
 [submodule "Colorful/upstream"]
 	path = Colorful/upstream
 	url = https://github.com/richzhang/colorization.git
+[submodule "ColorfulKeras/upstream"]
+	path = ColorfulKeras/upstream
+	url = https://github.com/tdeboissiere/DeepLearningImplementations.git
