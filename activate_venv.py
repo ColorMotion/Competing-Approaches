@@ -34,9 +34,9 @@ def main(args):
 
     requirements = Path('requirements.txt')
     if requirements.exists():
-        subprocess.check_call(['pip', 'install', '-r', requirements])
+        subprocess.check_call(['pip', 'install', '-Ir', requirements])
     else:
-        print('No requirements.txt file found, installing latest versions')
+        print("No requirements.txt file found, versions aren't frozen!")
     subprocess.check_call(['pip', 'install', '-e', '.'])
 
     os.execvp(args.command[0], args.command)
