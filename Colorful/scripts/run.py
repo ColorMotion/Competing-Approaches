@@ -38,6 +38,10 @@ def main(args):
 
     destination = Path(args.destination)
     for path in args.images:
+        output = destination / Path(path).name
+        if output.exists():
+            print('{} exists, skipping input image {}'.format(output, path))
+            continue
         img_rgb = caffe.io.load_image(path)
 
         img_lab = color.rgb2lab(img_rgb)
@@ -57,7 +61,7 @@ def main(args):
         img_lab_out = np.concatenate((img_l[:, :, np.newaxis], ab_dec_us), axis=2)  # concatenate with original L
         img_rgb_out = (255 * np.clip(color.lab2rgb(img_lab_out), 0, 1)).astype('uint8') # convert to RGB
 
-        plt.imsave(str(destination / Path(path).name), img_rgb_out)
+        plt.imsave(str(output), img_rgb_out)
 
 
 if __name__ == '__main__':
