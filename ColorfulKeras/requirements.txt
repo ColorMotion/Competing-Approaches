@@ -13,7 +13,7 @@ kiwisolver==1.0.1
 matplotlib==3.0.1
 networkx==2.2
 numpy==1.15.4
-opencv-python==3.4.3.18
+opencv-python==3.4.7.28
 parmap==1.5.1
 Pillow==6.2.1
 pyparsing==2.3.0
