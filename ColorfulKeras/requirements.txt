@@ -12,7 +12,7 @@ Keras-Preprocessing==1.0.5
 kiwisolver==1.0.1
 matplotlib==3.0.1
 networkx==2.2
-numpy==1.15.4
+numpy==1.22.0
 opencv-python==3.4.3.18
 parmap==1.5.1
 Pillow==6.2.1
